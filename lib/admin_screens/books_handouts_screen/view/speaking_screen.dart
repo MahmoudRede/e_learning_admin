@@ -1,5 +1,7 @@
 
+import 'package:e_learning_admin/admin_screens/books_handouts_screen/speaking_tabs/audioScreen/audio.dart';
 import 'package:e_learning_admin/admin_screens/books_handouts_screen/speaking_tabs/pdf/pdf.dart';
+import 'package:e_learning_admin/admin_screens/books_handouts_screen/speaking_tabs/videoes/videoes.dart';
 import 'package:e_learning_admin/styles/color_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -51,9 +53,9 @@ class SpeakingScreen extends StatelessWidget {
           /// tabview
           body:  TabBarView(
             children: [
-              // AudioScreen(),
-              // VideoScreen(),
-              // PdfSpeakerScreen(),
+              AudioScreen(),
+              VideoScreen(),
+              PdfSpeakerScreen(),
             ],
           )),
     );

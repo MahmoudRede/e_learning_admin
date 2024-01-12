@@ -36,17 +36,17 @@ class HomeWorkScreen extends StatelessWidget {
                     Tab(
                         child: Text('Assignment',
                             style: TextStyle(
-                              fontSize:  MediaQuery.sizeOf(context).height*0.03,
+                              fontSize:  MediaQuery.sizeOf(context).height*0.02,
                             ))),
                     Tab(
                         child: Text('Marked Assignment',
                             style: TextStyle(
-                              fontSize:  MediaQuery.sizeOf(context).height*0.03,
+                              fontSize:  MediaQuery.sizeOf(context).height*0.02,
                             ))),
                     Tab(
                         child: Text('Marks',
                             style: TextStyle(
-                              fontSize:  MediaQuery.sizeOf(context).height*0.03,
+                              fontSize:  MediaQuery.sizeOf(context).height*0.02,
                             ))),
                   ])),
 

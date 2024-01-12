@@ -9,7 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BooksNameScreen extends StatelessWidget {
-  const BooksNameScreen({super.key});
+  final String title;
+  const BooksNameScreen({super.key,required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class BooksNameScreen extends StatelessWidget {
                 ),
               ),
               title: Text(
-                'Books',
+                title,
                 style: TextStyle(
                   color: ColorManager.black,
                   fontSize:  MediaQuery.of(context).size.height*0.025,

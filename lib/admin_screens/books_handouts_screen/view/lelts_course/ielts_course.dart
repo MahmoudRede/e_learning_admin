@@ -1,3 +1,4 @@
+import 'package:e_learning_admin/admin_screens/books_handouts_screen/books/books_name.dart';
 import 'package:e_learning_admin/admin_screens/books_handouts_screen/view/speaking_screen.dart';
 import 'package:e_learning_admin/admin_screens/books_handouts_screen/view/tracks_screen.dart';
 import 'package:e_learning_admin/constants/constants.dart';
@@ -13,10 +14,9 @@ class IeltsCourseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List actions = [
-          (){},
+          ()=>customPushNavigator(context, const BooksNameScreen(title: 'Handouts',)),
           ()=>customPushNavigator(context, const SpeakingScreen()),
-          // ()=>customPushNavigator(context, const TracksScreen()),
-          (){},
+          ()=>customPushNavigator(context, const TracksScreen()),
           (){},
 
     ];
@@ -34,7 +34,7 @@ class IeltsCourseScreen extends StatelessWidget {
           'IELTS Course',
           style: TextStyle(
             color: ColorManager.black,
-            fontSize:  MediaQuery.sizeOf(context).height*0.03,
+            fontSize:  MediaQuery.sizeOf(context).height*0.025,
             fontWeight: FontWeight.w600,
           ),
         ),

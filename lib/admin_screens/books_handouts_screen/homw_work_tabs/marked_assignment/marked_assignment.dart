@@ -6,17 +6,24 @@ class MarkedAssignmentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all( MediaQuery.sizeOf(context).height*0.02),
-        child: Column(
-          children: [
-            Text(
-              'Marked Assignments',
-              style: TextStyle(
-                  fontSize:  MediaQuery.sizeOf(context).height*0.03,
-                  fontWeight: FontWeight.w600),
-            ),
-          ],
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Padding(
+          padding: EdgeInsets.all( MediaQuery.sizeOf(context).height*0.02),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Marked Assignments',
+                style: TextStyle(
+                    fontSize:  MediaQuery.sizeOf(context).height*0.025,
+                    fontWeight: FontWeight.w600
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

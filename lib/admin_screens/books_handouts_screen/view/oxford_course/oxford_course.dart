@@ -15,11 +15,10 @@ class OxfordCourseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     List actions = [
-          ()=>customPushNavigator(context, const BooksNameScreen()),
+          ()=>customPushNavigator(context, const BooksNameScreen(title: 'Books',)),
           ()=>customPushNavigator(context, const SpeakingScreen()),
-          // ()=>customPushNavigator(context, const TracksScreen()),
+          ()=>customPushNavigator(context, const TracksScreen()),
           ()=>customPushNavigator(context, const HomeWorkScreen()),
-          (){},
           (){},
     ];
     return Scaffold(

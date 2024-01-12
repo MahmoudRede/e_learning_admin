@@ -38,7 +38,9 @@ class MaterialScreen extends StatelessWidget {
                           children: List.generate(
                             10,(index) => GestureDetector(
                             onTap: (){
-                              navigateTo(context, const OpenPdf(pdfUrl: 'https://firebasestorage.googleapis.com/v0/b/elearningapp-4adde.appspot.com/o/Handout-1.pdf?alt=media&token=b6746ae1-ea26-4554-8167-22878f5d085b'));
+                              if(title=='Pdf'){
+                                navigateTo(context, const OpenPdf(pdfUrl: 'https://firebasestorage.googleapis.com/v0/b/elearningapp-4adde.appspot.com/o/Handout-1.pdf?alt=media&token=b6746ae1-ea26-4554-8167-22878f5d085b'));
+                              }
                             },
                             child: Container(
                               margin: EdgeInsets.symmetric(
@@ -81,7 +83,8 @@ class MaterialScreen extends StatelessWidget {
                     ],
                   )
               ),
-              floatingActionButton: FloatingActionButton(
+
+              floatingActionButton: title=='Pdf'?FloatingActionButton(
                   backgroundColor: Colors.redAccent,
                   onPressed: (){
                     cubit.uploadPdf(
@@ -91,6 +94,24 @@ class MaterialScreen extends StatelessWidget {
                   },
                   child: Icon(
                     Icons.upload_file_outlined,
+                    color: ColorManager.white,
+                  )
+              ):title=='Audio'?FloatingActionButton(
+                  backgroundColor: Colors.redAccent,
+                  onPressed: (){
+
+                  },
+                  child: Icon(
+                    Icons.audio_file,
+                    color: ColorManager.white,
+                  )
+              ):FloatingActionButton(
+                  backgroundColor: Colors.redAccent,
+                  onPressed: (){
+
+                  },
+                  child: Icon(
+                    Icons.video_call,
                     color: ColorManager.white,
                   )
               ),

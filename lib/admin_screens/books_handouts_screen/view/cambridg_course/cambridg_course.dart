@@ -1,4 +1,5 @@
 
+import 'package:e_learning_admin/admin_screens/books_handouts_screen/books/books_name.dart';
 import 'package:e_learning_admin/admin_screens/books_handouts_screen/view/home_work.dart';
 import 'package:e_learning_admin/admin_screens/books_handouts_screen/view/speaking_screen.dart';
 import 'package:e_learning_admin/admin_screens/books_handouts_screen/view/tracks_screen.dart';
@@ -14,11 +15,10 @@ class CambridgeCourseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     List actions = [
-      (){},
+      ()=>customPushNavigator(context, const BooksNameScreen(title: 'Handouts',)),
       ()=>customPushNavigator(context, const SpeakingScreen()),
-      // ()=>customPushNavigator(context, const TracksScreen()),
+      ()=>customPushNavigator(context, const TracksScreen()),
       ()=>customPushNavigator(context, const HomeWorkScreen()),
-      (){},
       (){},
       (){},
     ];
@@ -36,7 +36,7 @@ class CambridgeCourseScreen extends StatelessWidget {
           'Cambridge Course',
           style: TextStyle(
             color: ColorManager.black,
-            fontSize: MediaQuery.of(context).size.height*0.03,
+            fontSize: MediaQuery.of(context).size.height*0.025,
             fontWeight: FontWeight.w600,
           ),
         ),

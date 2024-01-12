@@ -48,7 +48,7 @@ class PdfSpeakerScreen extends StatelessWidget {
                         return Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height*0.022),
-                            color: ColorManager.primaryLightColor,
+                            color: ColorManager.primary,
                           ),
                           height: MediaQuery.of(context).size.height*0.15,
 
@@ -92,7 +92,7 @@ class PdfSpeakerScreen extends StatelessWidget {
                                     child: Text(
                                       'Book Name Here',
                                       style: TextStyle(
-                                          fontSize: MediaQuery.of(context).size.height,
+                                          fontSize: MediaQuery.of(context).size.height*0.02,
                                           color: ColorManager.white
                                       ),
                                       maxLines: 2,

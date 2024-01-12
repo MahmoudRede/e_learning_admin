@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:audioplayers/audioplayers.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_learning_admin/admin_screens/all_users/all_users.dart';
 import 'package:e_learning_admin/business_logic/app_cubit/app_states.dart';
@@ -144,6 +145,48 @@ class AppCubit extends Cubit<AppStates> {
       });
 
     }
+
+
+  final player = AudioPlayer();
+
+  String test='';
+  Future<void> audioPlayerFunction({required String url})async{
+
+    await player.play(UrlSource(url)).then((value) {
+      test='1';
+      emit(GetAudioSuccessState());
+
+    }).catchError((error){
+
+      print('Error is ${error.toString()}');
+      emit(GetAudioErrorState());
+    });
+
+  }
+  bool isPlaying=false;
+
+  Future<bool> pausePlayer(context) async {
+    player.stop();
+    Navigator.pop(context);
+    test='';
+    emit(GetAudioSuccessState());
+
+    return isPlaying;
+  }
+
+
+//   Future<void> initVideoPlayer() async{
+// .then((value) {
+//         emit(GetVideoSuccessState());
+//       }).catchError((error){
+//
+//         debugPrint('Error in get video is ${error.toString()}');
+//         emit(GetVideoErrorState());
+//       });
+//   }
+
+
+
 
 
 

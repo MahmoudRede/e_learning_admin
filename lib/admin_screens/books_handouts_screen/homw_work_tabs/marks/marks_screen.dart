@@ -6,17 +6,23 @@ class MarksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.all( MediaQuery.sizeOf(context).height*0.02),
-        child: Column(
-          children: [
-            Text(
-              'Marked Assignments',
-              style: TextStyle(
-                  fontSize:  MediaQuery.sizeOf(context).height*0.015,
-                  fontWeight: FontWeight.w600),
-            ),
-          ],
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Padding(
+          padding: EdgeInsets.all( MediaQuery.sizeOf(context).height*0.02),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Marks',
+                style: TextStyle(
+                    fontSize:  MediaQuery.sizeOf(context).height*0.025,
+                    fontWeight: FontWeight.w600),
+              ),
+            ],
+          ),
         ),
       ),
     );

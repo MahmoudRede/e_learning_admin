@@ -60,6 +60,10 @@ dependencies:
   draw_graph:
   cool_alert:
   file_picker: ^6.1.1
+  audioplayers: ^5.2.1
+  salomon_bottom_bar: ^3.3.2
+  flutter_audio_waveforms: ^1.2.1+8
+  video_player: ^2.8.1
 
   #Firebase
   firebase_core:

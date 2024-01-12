@@ -20,3 +20,7 @@ class UploadPDFErrorState extends AppStates {}
 class GetPDFSuccessState extends AppStates {}
 class GetPDFLoadingState extends AppStates {}
 class GetPDFErrorState extends AppStates {}
+
+class GetAudioSuccessState extends AppStates {}
+class GetAudioLoadingState extends AppStates {}
+class GetAudioErrorState extends AppStates {}
