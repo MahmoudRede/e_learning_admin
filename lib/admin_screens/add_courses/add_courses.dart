@@ -149,29 +149,29 @@ class AddCourses extends StatelessWidget {
 
 
                       // add course
-                      state is UploadCourseImageLoadingState?
-                      const Center(
-                        child: CircularProgressIndicator(),
-                      ):
-                      DefaultButton(
-                        text: 'addCourse',
-                        onPressed: (){
-                          if(formKey.currentState!.validate()){
-
-
-
-                            }
-                            else{
-
-                              customToast(title: 'Please,Add required image', color: ColorManager.red);
-
-                            }
-
-
-                          }
-
-
-                      ),
+                      // state is UploadCourseImageLoadingState?
+                      // const Center(
+                      //   child: CircularProgressIndicator(),
+                      // ):
+                      // DefaultButton(
+                      //   text: 'addCourse',
+                      //   onPressed: (){
+                      //     if(formKey.currentState!.validate()){
+                      //
+                      //
+                      //
+                      //       }
+                      //       else{
+                      //
+                      //         customToast(title: 'Please,Add required image', color: ColorManager.red);
+                      //
+                      //       }
+                      //
+                      //
+                      //     }
+                      //
+                      //
+                      // ),
 
                       SizedBox(height: MediaQuery.of(context).size.height*.01,),
 

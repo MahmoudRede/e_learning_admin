@@ -1,24 +1,15 @@
 
-import 'package:e_learning_admin/admin_screens/open_pdf/open_pdf.dart';
+import 'package:e_learning_admin/admin_screens/free_note_screen/view/material_screen.dart';
+import 'package:e_learning_admin/constants/constants.dart';
 import 'package:e_learning_admin/styles/color_manager.dart';
 import 'package:e_learning_admin/widgets/navigate_to.dart';
-import 'package:e_learning_admin/widgets/navigation.dart';
 import 'package:flutter/material.dart';
 
-class BooksPartsScreen extends StatelessWidget {
-   final String bookName;
-   BooksPartsScreen({super.key,required this.bookName});
+class FreeNoteSectionScreen extends StatelessWidget {
+  const FreeNoteSectionScreen({super.key});
 
-  List<String> parts=[
-    'Part 1',
-    'Part 2',
-    'Part 3',
-    'Part 4',
-  ] ;
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(
@@ -30,7 +21,7 @@ class BooksPartsScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          bookName,
+          'Free Notes Section',
           style: TextStyle(
             color: ColorManager.black,
             fontSize: MediaQuery.of(context).size.height*0.025,
@@ -40,17 +31,38 @@ class BooksPartsScreen extends StatelessWidget {
         backgroundColor: ColorManager.white,
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: MediaQuery.of(context).size.height*0.02,right: MediaQuery.of(context).size.height*0.02, bottom: MediaQuery.of(context).size.height*0.02),
+        padding: EdgeInsets.only(
+            left: MediaQuery.of(context).size.height*0.02,
+            right: MediaQuery.of(context).size.height*0.02,
+            bottom: MediaQuery.of(context).size.height*0.02
+        ),
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height*0.025,),
 
             Expanded(
               child: ListView.separated(
                 itemBuilder: (context,index){
                   return GestureDetector(
                     onTap: (){
-                      navigateTo(context, const OpenPdf(pdfUrl: 'https://firebasestorage.googleapis.com/v0/b/elearningapp-4adde.appspot.com/o/Handout-1.pdf?alt=media&token=b6746ae1-ea26-4554-8167-22878f5d085b'));
+                      if(index==0){
+                        navigateTo(context,  const MaterialScreen(
+                          title: 'Pdf',
+                          image: 'assets/images/pdf.png',
+                        ));
+                      }
+                      else if(index==1){
+                        navigateTo(context,  const MaterialScreen(
+                          title: 'Audio',
+                          image: 'assets/images/audio.png',
+                        ));
+                      }
+                      else{
+                        navigateTo(context,  const MaterialScreen(
+                          title: 'Video',
+                          image: 'assets/images/video.png',
+                        ));
+                      }
+
                     },
                     child: Container(
                       height: MediaQuery.of(context).size.height*0.1,
@@ -59,7 +71,9 @@ class BooksPartsScreen extends StatelessWidget {
 
                       decoration: BoxDecoration(
                         color: ColorManager.primary,
-                        borderRadius: BorderRadius.circular(MediaQuery.of(context).size.height*0.02),
+                        borderRadius: BorderRadius.circular(
+                            MediaQuery.of(context).size.height*0.02
+                        ),
                       ),
 
                       child: Padding(
@@ -68,10 +82,10 @@ class BooksPartsScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              parts[index],
+                              freeMaterialsSections[index],
                               style: TextStyle(
                                 color: ColorManager.white,
-                                fontSize: MediaQuery.of(context).size.height*0.015,
+                                fontSize: MediaQuery.of(context).size.height*0.02,
                                 fontWeight: FontWeight.w600,
                               ),
                               overflow: TextOverflow.ellipsis,
@@ -91,7 +105,7 @@ class BooksPartsScreen extends StatelessWidget {
                 separatorBuilder: (context,index){
                   return SizedBox(height: MediaQuery.of(context).size.height*0.01,);
                 },
-                itemCount: parts.length,
+                itemCount: freeMaterialsSections.length,
               ),
             ),
           ],

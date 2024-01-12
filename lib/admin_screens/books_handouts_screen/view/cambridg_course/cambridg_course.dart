@@ -20,6 +20,7 @@ class CambridgeCourseScreen extends StatelessWidget {
       ()=>customPushNavigator(context, const HomeWorkScreen()),
       (){},
       (){},
+      (){},
     ];
     return Scaffold(
       appBar: AppBar(

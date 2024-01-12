@@ -20,6 +20,7 @@ class OxfordCourseScreen extends StatelessWidget {
           // ()=>customPushNavigator(context, const TracksScreen()),
           ()=>customPushNavigator(context, const HomeWorkScreen()),
           (){},
+          (){},
     ];
     return Scaffold(
       appBar: AppBar(
@@ -35,7 +36,7 @@ class OxfordCourseScreen extends StatelessWidget {
           'Oxford Course',
           style: TextStyle(
             color: ColorManager.black,
-            fontSize:  MediaQuery.sizeOf(context).height*0.03,
+            fontSize:  MediaQuery.sizeOf(context).height*0.025,
             fontWeight: FontWeight.w600,
           ),
         ),

@@ -1,13 +1,21 @@
 import 'package:e_learning_admin/admin_screens/admin_home/admin_home.dart';
+import 'package:e_learning_admin/admin_screens/all_users/course_students.dart';
 import 'package:e_learning_admin/business_logic/app_cubit/app_cubit.dart';
 import 'package:e_learning_admin/business_logic/app_cubit/app_states.dart';
+import 'package:e_learning_admin/firebase_options.dart';
 import 'package:e_learning_admin/home_screen.dart';
 import 'package:e_learning_admin/styles/color_manager.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 class MyApp extends StatefulWidget {
@@ -30,11 +38,12 @@ class _MyAppState extends State<MyApp> {
         builder: (context,state){
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'M2M',
             theme: ThemeData(
+              fontFamily: 'Nunito',
               primarySwatch: Colors.blue,
               scaffoldBackgroundColor: ColorManager.white,
               appBarTheme: AppBarTheme(
+                titleSpacing: 0.0,
                 backgroundColor: ColorManager.white,
                 elevation: 0.0,
                 iconTheme: IconThemeData(
@@ -46,7 +55,7 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
             ),
-            home: const AdminHome(),
+              home: const AdminHome(),
 
           );
         },

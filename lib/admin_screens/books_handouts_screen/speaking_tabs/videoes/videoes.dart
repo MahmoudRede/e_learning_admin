@@ -1,9 +1,5 @@
-// import 'package:e_learning/business_logic/global_cubit/global_cubit.dart';
-// import 'package:e_learning/helper/material_navigation.dart';
-// import 'package:e_learning/presentation/screens/books_handouts_screen/speaking_tabs/videoes/open_video.dart';
-// import 'package:e_learning/presentation/styles/app_size_config.dart';
+//
 // import 'package:flutter/material.dart';
-// import 'package:video_player/video_player.dart';
 //
 // class VideoScreen extends StatefulWidget {
 //   const VideoScreen({super.key});

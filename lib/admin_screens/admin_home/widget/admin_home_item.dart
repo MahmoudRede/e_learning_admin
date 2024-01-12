@@ -7,7 +7,6 @@ class AdminHomeItem extends StatelessWidget {
     'All_Students',
     'Student Request',
     'Books & Handouts',
-    'Past Paper',
     'Notes free',
   ];
 
@@ -15,7 +14,6 @@ class AdminHomeItem extends StatelessWidget {
     'https://img.freepik.com/free-photo/group-students-posing-table_23-2147666543.jpg?w=740&t=st=1703239807~exp=1703240407~hmac=42db32dd56219a9e38ad81062553673eed8942fb9e4bb7e70463d5815056c94e',
     'https://img.freepik.com/premium-vector/hand-drawn-study-abroad-illustration_23-2150310003.jpg?w=740',
     'https://img.freepik.com/free-photo/literature-concept_23-2147690493.jpg?w=360&t=st=1703239852~exp=1703240452~hmac=c2dff7464d31a38595b602ace9086c2e92deedfb91a9452c12cc28012f50065b',
-    'https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5920.jpg?w=740&t=st=1703239899~exp=1703240499~hmac=9fd8df526f7aa80e35fccbae94411060ccd87cb92095c6bb37cbf82f7b24846e',
     'https://img.freepik.com/free-vector/hand-drawn-book-infographics_23-2148663634.jpg?w=740&t=st=1703239931~exp=1703240531~hmac=b6bd0ab61b81c918e2108de0d106d32c8caa34b644b67f65a530ad01548f6e64',
   ];
 

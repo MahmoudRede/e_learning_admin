@@ -17,6 +17,8 @@ class IeltsCourseScreen extends StatelessWidget {
           ()=>customPushNavigator(context, const SpeakingScreen()),
           // ()=>customPushNavigator(context, const TracksScreen()),
           (){},
+          (){},
+
     ];
     return Scaffold(
       appBar: AppBar(

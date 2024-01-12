@@ -1,4 +1,5 @@
 
+import 'package:e_learning_admin/admin_screens/books_handouts_screen/speaking_tabs/pdf/pdf.dart';
 import 'package:e_learning_admin/styles/color_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -33,17 +34,17 @@ class SpeakingScreen extends StatelessWidget {
                     Tab(
                         child: Text('Audio',
                             style: TextStyle(
-                              fontSize:  MediaQuery.sizeOf(context).height*0.025,
+                              fontSize:  MediaQuery.sizeOf(context).height*0.02,
                             ))),
                     Tab(
                         child: Text('Video',
                             style: TextStyle(
-                              fontSize:  MediaQuery.sizeOf(context).height*0.025,
+                              fontSize:  MediaQuery.sizeOf(context).height*0.02
                             ))),
                     Tab(
                         child: Text('PDF',
                             style: TextStyle(
-                              fontSize:  MediaQuery.sizeOf(context).height*0.025,
+                              fontSize:  MediaQuery.sizeOf(context).height*0.02,
                             ))),
                   ])),
 

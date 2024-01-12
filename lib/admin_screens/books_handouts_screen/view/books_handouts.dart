@@ -36,7 +36,7 @@ class BooksAndHandoutsScreen extends StatelessWidget {
           'Books & Handouts',
           style: TextStyle(
             color: ColorManager.black,
-            fontSize:  MediaQuery.of(context).size.height*0.03,
+            fontSize:  MediaQuery.of(context).size.height*0.025,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -46,7 +46,7 @@ class BooksAndHandoutsScreen extends StatelessWidget {
         padding: EdgeInsets.only(top:  MediaQuery.of(context).size.height*0.01,left:  MediaQuery.of(context).size.height*0.02,right:  MediaQuery.of(context).size.height*0.02, bottom:  MediaQuery.of(context).size.height*0.02),
         child: Column(
           children: [
-            SizedBox(height:  MediaQuery.of(context).size.height*0.025,),
+            SizedBox(height:  MediaQuery.of(context).size.height*0.015),
 
             Expanded(
               child: ListView.separated(
@@ -56,7 +56,7 @@ class BooksAndHandoutsScreen extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular( MediaQuery.of(context).size.height*0.022),
-                        color: ColorManager.primaryLightColor,
+                        color: ColorManager.primary,
                       ),
                       height:  MediaQuery.of(context).size.height*0.15,
 
@@ -80,7 +80,7 @@ class BooksAndHandoutsScreen extends StatelessWidget {
                                 ),
                                 child: CachedNetworkImage(
                                   fit: BoxFit.cover,
-                                  imageUrl: '',
+                                  imageUrl: 'https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?w=740&t=st=1704621629~exp=1704622229~hmac=d1b415f8eafa39a4da38000cad51e9cf8d867f79599909273bb7a0ed5ef44052',
                                   progressIndicatorBuilder:  (context, url,downloadProgress) {
                                     return const Center(child: CircularProgressIndicator(),);
                                   },
